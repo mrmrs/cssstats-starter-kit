@@ -1,0 +1,35 @@
+{
+  "name": "cssstats-starter-kit",
+  "version": "1.0.0",
+  "description": "A starting off point for building a living style guide.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrmrs/cssstats-starter-kit.git"
+  },
+  "keywords": [
+    "css",
+    "performance",
+    "statistics",
+    "build",
+    "design"
+  ],
+  "author": "mrmrs",
+  "license": "MIT",
+  "devDependencies": {
+    "cssstats": "^2.0.1",
+    "filesize": "^3.1.3",
+    "lodash": "^3.10.0",
+    "postcss": "^4.1.16",
+    "watch": "^0.16.0"
+  },
+  "contributors": [
+    {
+      "name": "mrmrs",
+      "email": "hi@mrmrs.cc"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  }
+}
