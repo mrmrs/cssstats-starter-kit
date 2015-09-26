@@ -14,7 +14,8 @@ var moduleSize = filesize(moduleObj.size)
 var moduleGzipSize = filesize(moduleObj.gzipSize)
 var moduleSizeDifference = 100 - ((moduleObj.gzipSize  / moduleObj.size) * 100);
 
-var uniqueColorsCount = moduleObj.declarations.getUniquePropertyCount('color')
+var uniqueColorsCount =  moduleObj.declarations.getUniquePropertyCount('color')
+var fontSizes = _.uniq(moduleObj.declarations.getAllFontSizes())
 
 var uniquePropertiesCount = Object.keys(moduleObj.declarations.properties)
    .map(function (key) {
@@ -45,6 +46,7 @@ var html = tpl({
   uniqueColorsCount: uniqueColorsCount,
   siteNav: siteNav,
   uniquePropertiesCount: uniquePropertiesCount,
+  fontSizes: fontSizes
 })
 
 // File to write too, this is configurable

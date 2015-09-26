@@ -156,7 +156,7 @@
         <h1>Declarations</h1>
         <h2>Total</h2>
         <span><%= moduleObj.declarations.total %></span>
-        <h2>Unique Count for each Property</h2>
+        <h3><b>Unique Count for each Property</h3>
         <% function uniqPropsCount (unique) { %>
           <dl>
             <dt><%=unique.prop %></dt>
@@ -165,6 +165,14 @@
         <% } %>
 
         <% uniquePropertiesCount.map(uniqPropsCount) %>
+
+      </article>
+      <article>
+        <h1>Unique Font Sizes</h1>
+        <% function typeScale (fontsize) { %>
+            <div><%= fontsize %></div>
+        <% } %>
+        <% fontSizes.map(typeScale) %>
 
       </article>
       <article>
