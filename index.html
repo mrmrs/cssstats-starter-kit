@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>
-       CSSSTATS - Starter Kit
+      CSSSTATS - Starter Kit
     </title>
     <meta name="author" content="@mrmrs">
     <meta name="description" content="Base for building a living style guide from a css file.">
@@ -12,11 +12,16 @@
     <style type="text/css" media="screen">
       body {
         margin: 0;
-        padding: 1em;
+        padding: 1.5em;
         font-family: avenir, helvetica, sans-serif;
       }
-      h1 { font-size: 2rem; texst-transform: uppercase; }
-      h2 { font-size: 1rem; }
+      h1 { font-size: 2rem; margin-bottom: 0; text-transform: uppercase; border-bottom: 1px solid #999; padding-bottom: .25em; }
+
+      h2 { font-size: 1rem; font-weight: 400; margin-bottom: 0;  }
+      span { font-size: 1.5rem; font-weight: 900; }
+      main,
+      nav,
+      footer { max-width: 42em; margin-right: auto; margin-left: auto; }
     </style>
   </head>
   <body>
@@ -31,8 +36,9 @@
 
     <main>
       <article>
-        Size: 91.51 kB<br>
-        Gzip: 16.35 kB
+        <b>File Size:</b> 91.51 kB<br>
+        <b>File Size (Gzipped):</b> 16.35 kB<br>
+        <b>Gzip Savings:</b> 82.13378583167915%
       </article>
       <article>
         <h1>Rules</h1>
@@ -44,7 +50,7 @@
         <span>1.1521862578080635</span>
       </article>
       <article>
-        <h1>selectors</h1>
+        <h1>Selectors</h1>
         <h2>Total</h2>
         <span>1866</span>
         <h2>Id</h2>
@@ -63,15 +69,30 @@
         <span>11.02572347266881</span>
 
       </article>
+      <article>
+        <h1>Declarations</h1>
+        <h2>Total</h2>
+        <span>2029</span>
+      </article>
+      <article>
+        <h1>Media Queries</h1>
+        <h2>Total</h2>
+        <span>84</span>
+        <h2>Unique</h2>
+        <span>3</span>
+        <h2>Values</h2>
+        <span>screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em),screen and (min-width: 30em),screen and (min-width: 30em) and (max-width: 60em),screen and (min-width: 60em)</span>
+      </article>
     </main>
     <br>
     <br>
     <br>
     <br>
     <br>
-    <footer>
-  <!-- Place Footer Content Here -->
-  Your footer content
+    <footer style="padding-bottom: 4em;">
+  Your footer content. You can edit this content in <br>
+  <code style="background:cyan; padding: .25em;">templates/footer.html</code>
+
 </footer>
 
   </body>

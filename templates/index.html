@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>
-       CSSSTATS - Starter Kit
+      CSSSTATS - Starter Kit
     </title>
     <meta name="author" content="@mrmrs">
     <meta name="description" content="Base for building a living style guide from a css file.">
@@ -12,19 +12,25 @@
     <style type="text/css" media="screen">
       body {
         margin: 0;
-        padding: 1em;
+        padding: 1.5em;
         font-family: avenir, helvetica, sans-serif;
       }
-      h1 { font-size: 2rem; texst-transform: uppercase; }
-      h2 { font-size: 1rem; }
+      h1 { font-size: 2rem; margin-bottom: 0; text-transform: uppercase; border-bottom: 1px solid #999; padding-bottom: .25em; }
+
+      h2 { font-size: 1rem; font-weight: 400; margin-bottom: 0;  }
+      span { font-size: 1.5rem; font-weight: 900; }
+      main,
+      nav,
+      footer { max-width: 42em; margin-right: auto; margin-left: auto; }
     </style>
   </head>
   <body>
     <%= siteNav %>
     <main>
       <article>
-        Size: <%= moduleSize %><br>
-        Gzip: <%= moduleGzipSize %>
+        <b>File Size:</b> <%= moduleSize %><br>
+        <b>File Size (Gzipped):</b> <%= moduleGzipSize %><br>
+        <b>Gzip Savings:</b> <%= moduleSizeDifference %>%
       </article>
       <article>
         <h1>Rules</h1>
@@ -36,7 +42,7 @@
         <span><%= moduleObj.rules.size.average %></span>
       </article>
       <article>
-        <h1>selectors</h1>
+        <h1>Selectors</h1>
         <h2>Total</h2>
         <span><%= moduleObj.selectors.total %></span>
         <h2>Id</h2>
@@ -54,6 +60,20 @@
         <h2>Specificity Average</h2>
         <span><%= moduleObj.selectors.specificity.average %></span>
 
+      </article>
+      <article>
+        <h1>Declarations</h1>
+        <h2>Total</h2>
+        <span><%= moduleObj.declarations.total %></span>
+      </article>
+      <article>
+        <h1>Media Queries</h1>
+        <h2>Total</h2>
+        <span><%= moduleObj.mediaQueries.total %></span>
+        <h2>Unique</h2>
+        <span><%= moduleObj.mediaQueries.unique %></span>
+        <h2>Values</h2>
+        <span><%= moduleObj.mediaQueries.values %></span>
       </article>
     </main>
     <br>

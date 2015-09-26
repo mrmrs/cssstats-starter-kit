@@ -12,6 +12,7 @@ var moduleCss = fs.readFileSync('./css/test.css', 'utf8')
 var moduleObj = cssstats(moduleCss)
 var moduleSize = filesize(moduleObj.size)
 var moduleGzipSize = filesize(moduleObj.gzipSize)
+var moduleSizeDifference = 100 - ((moduleObj.gzipSize  / moduleObj.size) * 100);
 
 var statsoutput = JSON.stringify(moduleObj, null, '\t')
 
@@ -26,6 +27,7 @@ var tpl = _.template(template)
 var html = tpl({
   moduleSize: moduleSize,
   moduleGzipSize: moduleGzipSize,
+  moduleSizeDifference: moduleSizeDifference,
   moduleObj: moduleObj,
   siteFooter: siteFooter,
   siteNav: siteNav
