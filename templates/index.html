@@ -22,6 +22,33 @@
       main,
       nav,
       footer { max-width: 42em; margin-right: auto; margin-left: auto; }
+      svg { display: block; float: left; }
+      .cta-links {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .cta-links a {
+        display: inline-block;
+        border: 1px solid;
+        border-radius: .25em;
+        padding: .75em;
+      }
+      .link,
+      .link:link,
+      .link:visited {
+        text-decoration: none;
+        color: #000;
+        opacity: 1;
+        -webkit-transition: opacity .15s ease-in;
+        transition: opacity .15s ease-in;
+      }
+      .link:hover,
+      .link:focus,
+      .link:active {
+        opacity: .3;
+        -webkit-transition: opacity .15s ease-in;
+        transition: opacity .15s ease-in;
+      }
     </style>
   </head>
   <body>
