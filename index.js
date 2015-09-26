@@ -14,6 +14,18 @@ var moduleSize = filesize(moduleObj.size)
 var moduleGzipSize = filesize(moduleObj.gzipSize)
 var moduleSizeDifference = 100 - ((moduleObj.gzipSize  / moduleObj.size) * 100);
 
+var uniqueColorsCount = moduleObj.declarations.getUniquePropertyCount('color')
+
+var uniquePropertiesCount = Object.keys(moduleObj.declarations.properties)
+   .map(function (key) {
+     return {
+       prop: key,
+       count: moduleObj.declarations.getUniquePropertyCount(key)
+     }
+   })
+
+
+
 var statsoutput = JSON.stringify(moduleObj, null, '\t')
 
 // These are templates for nav partials you can add site wide nav to.
@@ -30,7 +42,9 @@ var html = tpl({
   moduleSizeDifference: moduleSizeDifference,
   moduleObj: moduleObj,
   siteFooter: siteFooter,
-  siteNav: siteNav
+  uniqueColorsCount: uniqueColorsCount,
+  siteNav: siteNav,
+  uniquePropertiesCount: uniquePropertiesCount,
 })
 
 // File to write too, this is configurable
