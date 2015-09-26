@@ -168,9 +168,17 @@
 
       </article>
       <article>
+        <br>
+        <br>
+        <br>
         <h1>Unique Font Sizes</h1>
+        <br>
+        <br>
         <% function typeScale (fontsize) { %>
             <div><%= fontsize %></div>
+            <div style="margin-bottom: 2rem; font-weight: 100; font-size:<%= fontsize %>;">
+              Lorem ipsum dolor sit amet
+            </div>
         <% } %>
         <% fontSizes.map(typeScale) %>
 

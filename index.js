@@ -15,7 +15,7 @@ var moduleGzipSize = filesize(moduleObj.gzipSize)
 var moduleSizeDifference = 100 - ((moduleObj.gzipSize  / moduleObj.size) * 100);
 
 var uniqueColorsCount =  moduleObj.declarations.getUniquePropertyCount('color')
-var fontSizes = _.uniq(moduleObj.declarations.getAllFontSizes())
+var fontSizes = _.uniq(moduleObj.declarations.getAllFontSizes().sort())
 
 var uniquePropertiesCount = Object.keys(moduleObj.declarations.properties)
    .map(function (key) {
